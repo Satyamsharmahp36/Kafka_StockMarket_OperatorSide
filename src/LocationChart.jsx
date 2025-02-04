@@ -204,7 +204,6 @@ const StockSimulation = () => {
     <LineChart data={stockData.priceHistory}>
         <CartesianGrid strokeDasharray="3 3" className="opacity-30" />
         
-        {/* Dynamically adjust X-Axis */}
         <XAxis 
             dataKey="time" 
             label={{ value: 'Time Period', position: 'bottom' }}
@@ -214,7 +213,6 @@ const StockSimulation = () => {
             type="number"
         />
 
-        {/* Dynamically adjust Y-Axis based on stock prices */}
         <YAxis 
             label={{ value: 'Price ($)', angle: -90, position: 'left' }}
             domain={[
@@ -224,7 +222,6 @@ const StockSimulation = () => {
             allowDataOverflow
         />
 
-        {/* Custom Tooltip for better UI */}
         <Tooltip
             contentStyle={{
                 backgroundColor: 'white',
@@ -236,7 +233,6 @@ const StockSimulation = () => {
 
         <Legend />
         
-        {/* Line Chart for Stock Prices */}
         <Line
             type="monotone"
             dataKey="price"
